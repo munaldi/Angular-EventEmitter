@@ -11,7 +11,7 @@ export class ChildComponent implements OnInit {
 
   @Output() messageToEmit = new EventEmitter<any>();
 
-  messageToSend: Array<any> = [1,2,3,4,5,6,7,8,9,"Parent"];
+  messageToSend: Array<any> = [1,2,3,4,5,6,7,8,9,"From Child"];
 
   contructor() { }
 
