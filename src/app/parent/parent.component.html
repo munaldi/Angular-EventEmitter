@@ -1,0 +1,16 @@
+<h1>Parent Component</h1>
+<div>
+  <tr class="row"
+      *ngFor="let child of receivedMessage">
+        <td>{{ child }}</td>
+  </tr>
+</div>
+<div>
+  <button (click)="sendToChild([1,2,3,4,5,6,7,8,9,'Parent'])">Send to Child</button>
+</div>
+<div>
+  <app-child 
+  [receivedParentMessage] = "messageToSend"
+  (messageToEmit) = "getMessage($event)">
+  </app-child>
+</div>
